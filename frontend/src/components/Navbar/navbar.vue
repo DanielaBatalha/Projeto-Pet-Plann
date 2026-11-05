@@ -63,6 +63,15 @@
 
       <hr />
       <li>
+        <router-link to="/ml">
+          <a href="#">
+            <i class="fa-solid fa-brain"></i>
+            <span class="custom-links_name">ML</span>
+          </a>
+        </router-link>
+        <span class="custom-tooltip">Previsão</span>
+      </li>
+      <li>
         <router-link to="/funcionarios">
           <a href="#">
             <i class="fa-solid fa-user"></i>

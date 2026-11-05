@@ -52,6 +52,46 @@ export default {
         return response.data.senhaCorreta;
     },
 
+    async getPrevisaoVendas() {
+        const url = `${ApiUrl}/ml/previsao-vendas`;
+        const response = await axios.get(url).catch(error => {
+            console.error('Erro ao buscar previsão de vendas: ', error);
+            throw error;
+        });
+
+        return response.data;
+    },
+
+    async getPrevisaoServicos() {
+        const url = `${ApiUrl}/ml/previsao-servicos`;
+        const response = await axios.get(url).catch(error => {
+            console.error('Erro ao buscar previsão de serviços: ', error);
+            throw error;
+        });
+
+        return response.data;
+    },
+
+    async getPrevisaoProdutos() {
+        const url = `${ApiUrl}/ml/previsao-produtos`;
+        const response = await axios.get(url).catch(error => {
+            console.error('Erro ao buscar previsão de produtos: ', error);
+            throw error;
+        });
+
+        return response.data;
+    },
+
+    async getAnalitica() {
+        const url = `${ApiUrl}/ml/analitica`;
+        const response = await axios.get(url).catch(error => {
+            console.error('Erro ao buscar análise analítica: ', error);
+            throw error;
+        });
+
+        return response.data;
+    },
+
 
     // Requisições Clientes
 

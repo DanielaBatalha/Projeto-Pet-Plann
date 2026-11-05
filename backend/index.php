@@ -13,6 +13,7 @@ use App\Controller\AuthController;
 use App\Controller\ProdutoController;
 use App\Controller\FornecedoresController;
 use App\Controller\VendasController;
+use App\Controller\MLController;
  use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\RequestInterface as Request;
 
@@ -26,6 +27,10 @@ header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-W
 
 
 $app = AppFactory::create();
+
+$app->options('/{routes:.*}', function (Request $request, Response $response) {
+    return $response;
+});
 
 $app->addBodyParsingMiddleware();
 
@@ -118,5 +123,9 @@ $app->delete('/deletarServico/{id}', ServicosController::class . ':deletarServic
 $app->post('/venda', VendasController::class . ':cadastrarVenda');
 $app->get('/historico-vendas', VendasController::class . ':getHistoricoVendas');
 
+$app->get('/ml/previsao-vendas', MLController::class . ':previsaoVendas');
+$app->get('/ml/previsao-servicos', MLController::class . ':previsaoServicos');
+$app->get('/ml/previsao-produtos', MLController::class . ':previsaoProdutos');
+$app->get('/ml/analitica', MLController::class . ':previsaoAnalitica');
 
 $app->run();
