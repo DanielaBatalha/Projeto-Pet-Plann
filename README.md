@@ -26,7 +26,7 @@ Daniela Batalha da Silva: https://github.com/DanielaBatalha
 - Framework Web: Vue.js
 - Framework API: Slim Framework
 - Banco de Dados: MySQL
-- Linguagens Web: HTML, CSS, JavaScript
+- Linguagens Web: HTML, CSS, JavaScript, Python
 - Ferramentas de Controle de Versão: Git, GitHub
 
 ## Instalação e Configuração ⚙️
