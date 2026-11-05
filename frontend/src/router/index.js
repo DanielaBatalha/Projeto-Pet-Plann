@@ -7,6 +7,7 @@ import Fornecedores from '../views/FornecedoresView.vue';
 import Caixa from '../views/CaixaView.vue';
 import Funcionarios from '../views/FuncionariosView.vue';
 import Login from '../views/LoginView.vue';
+import MLView from '../views/MLView.vue';
 import Swal from "sweetalert2";
 import ApiController from '@/ApiController';
 
@@ -121,6 +122,12 @@ const routes = [
     name: 'Caixa',
     component: Caixa,
 
+    beforeEnter: verificarAutenticacao
+  },
+  {
+    path: '/ml',
+    name: 'ML',
+    component: MLView,
     beforeEnter: verificarAutenticacao
   },
   {

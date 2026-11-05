@@ -2,7 +2,7 @@
 
 ## Descrição 📄
 
-O PetPlann é um sistema de gerenciamento completo e intuitivo desenvolvido como projeto integrador de curso para o curso de Engenharia da Computação na Univesp. O sistema tem como objetivo auxiliar os petshops no gerenciamento eficiente de suas atividades diárias, oferecendo uma solução abrangente para agendamento de serviços, controle de estoque, registro de clientes, animais, funcionários, produtos, serviços e fornecedores, além de facilitar a realização de vendas e geração de relatórios.
+O PetPlann é um sistema de gerenciamento completo e intuitivo desenvolvido como projeto integrador para o curso de Engenharia da Computação na Univesp. O sistema tem como objetivo auxiliar os petshops no gerenciamento eficiente de suas atividades diárias, oferecendo uma solução abrangente para agendamento de serviços, controle de estoque, registro de clientes, animais, funcionários, produtos, serviços e fornecedores, além de facilitar a realização de vendas e geração de relatórios.
 
 ## Características ✨
 
@@ -26,17 +26,22 @@ Daniela Batalha da Silva: https://github.com/DanielaBatalha
 - Framework Web: Vue.js
 - Framework API: Slim Framework
 - Banco de Dados: MySQL
-- Linguagens Web: HTML, CSS, JavaScript
+- Linguagens Web: HTML, CSS, JavaScript, Python
 - Ferramentas de Controle de Versão: Git, GitHub
 
 ## Instalação e Configuração ⚙️
 
-1. Clone este repositório: https://github.com/DanielaBatalha/Projeto-Pet-Plann.git
-2. Navegue até o diretório do web: `cd frontend`
-3. Navegue até o diretório da API: `cd backend`
-4. Instale as dependências front-end: `npm i`
-5. Configure as variáveis de ambiente no arquivo `.env`:
-6. Inicie o servidor do back-end: `php -S localhost:84`
-9. Inicie o servidor do front-end: `npm run serve`
-10. Acesse o sistema no seu navegador: `http://localhost:8080`
-
+1. Clone este repositório: `git clone https://github.com/DanielaBatalha/Projeto-Pet-Plann.git`
+2. Em um terminal, instale e inicie o front-end:
+   ```bash
+   cd frontend
+   npm i
+   npm run serve
+   ```
+3. Configure as variáveis do banco de dados em `backend/.env`.
+4. Em outro terminal, inicie o back-end com o roteador Slim:
+   ```bash
+   cd backend
+   php -S localhost:84 router.php
+   ```
+5. Acesse o sistema em `http://localhost:8080`.
